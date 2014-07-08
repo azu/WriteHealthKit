@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00ED79AE2D3847E88C5B31C7 /* libPods-WriteHealthKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A29110BECD496388FC984B /* libPods-WriteHealthKit.a */; };
+		17B5C356B6DC04EFD4823803 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CC653F7591628D409CA7 /* ViewModel.m */; };
+		17B5C86EA227BA77ED1ABDDC /* DataStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C26E9A080D78C813D4D4 /* DataStoreManager.m */; };
+		737BD2B3196C3A420061AEDD /* WriteHealthKit.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 737BD2B2196C3A420061AEDD /* WriteHealthKit.entitlements */; };
 		73B99099196C2B0E002A9C89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B99098196C2B0E002A9C89 /* main.m */; };
 		73B9909C196C2B0E002A9C89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B9909B196C2B0E002A9C89 /* AppDelegate.m */; };
 		73B9909F196C2B0E002A9C89 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73B9909E196C2B0E002A9C89 /* ViewController.m */; };
@@ -26,6 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17B5C26E9A080D78C813D4D4 /* DataStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStoreManager.m; sourceTree = "<group>"; };
+		17B5C6A0E7E4C9E0017D926F /* DataStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStoreManager.h; sourceTree = "<group>"; };
+		17B5C9EB4CB5DC16231D997E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = README.md; sourceTree = "<group>"; };
+		17B5CC653F7591628D409CA7 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
+		17B5CDBB1F0B30763A1674B7 /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		1B46C68B4A0C415A95E0AA55 /* Pods-WriteHealthKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WriteHealthKit.xcconfig"; path = "Pods/Pods-WriteHealthKit.xcconfig"; sourceTree = "<group>"; };
+		737BD2B2196C3A420061AEDD /* WriteHealthKit.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = WriteHealthKit.entitlements; sourceTree = "<group>"; };
 		73B99093196C2B0E002A9C89 /* WriteHealthKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WriteHealthKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B99097196C2B0E002A9C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73B99098196C2B0E002A9C89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -38,6 +49,7 @@
 		73B990A9196C2B0F002A9C89 /* WriteHealthKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WriteHealthKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B990AE196C2B0F002A9C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73B990AF196C2B0F002A9C89 /* WriteHealthKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WriteHealthKitTests.m; sourceTree = "<group>"; };
+		A6A29110BECD496388FC984B /* libPods-WriteHealthKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WriteHealthKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00ED79AE2D3847E88C5B31C7 /* libPods-WriteHealthKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +77,9 @@
 				73B99095196C2B0E002A9C89 /* WriteHealthKit */,
 				73B990AC196C2B0F002A9C89 /* WriteHealthKitTests */,
 				73B99094196C2B0E002A9C89 /* Products */,
+				1B46C68B4A0C415A95E0AA55 /* Pods-WriteHealthKit.xcconfig */,
+				7B2706105B6D4893A5403CB4 /* Frameworks */,
+				17B5C9EB4CB5DC16231D997E /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +95,7 @@
 		73B99095196C2B0E002A9C89 /* WriteHealthKit */ = {
 			isa = PBXGroup;
 			children = (
+				737BD2B2196C3A420061AEDD /* WriteHealthKit.entitlements */,
 				73B9909A196C2B0E002A9C89 /* AppDelegate.h */,
 				73B9909B196C2B0E002A9C89 /* AppDelegate.m */,
 				73B9909D196C2B0E002A9C89 /* ViewController.h */,
@@ -86,6 +103,10 @@
 				73B990A0196C2B0E002A9C89 /* Main.storyboard */,
 				73B990A3196C2B0E002A9C89 /* Images.xcassets */,
 				73B99096196C2B0E002A9C89 /* Supporting Files */,
+				17B5CC653F7591628D409CA7 /* ViewModel.m */,
+				17B5CDBB1F0B30763A1674B7 /* ViewModel.h */,
+				17B5C26E9A080D78C813D4D4 /* DataStoreManager.m */,
+				17B5C6A0E7E4C9E0017D926F /* DataStoreManager.h */,
 			);
 			path = WriteHealthKit;
 			sourceTree = "<group>";
@@ -116,6 +137,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7B2706105B6D4893A5403CB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6A29110BECD496388FC984B /* libPods-WriteHealthKit.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73B990B3196C2B0F002A9C89 /* Build configuration list for PBXNativeTarget "WriteHealthKit" */;
 			buildPhases = (
+				8772BE18325847F78AA3706B /* Check Pods Manifest.lock */,
 				73B9908F196C2B0E002A9C89 /* Sources */,
 				73B99090196C2B0E002A9C89 /* Frameworks */,
 				73B99091196C2B0E002A9C89 /* Resources */,
+				D6D8047FC848475F88D757FA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,6 +196,14 @@
 				TargetAttributes = {
 					73B99092196C2B0E002A9C89 = {
 						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					73B990A8196C2B0F002A9C89 = {
 						CreatedOnToolsVersion = 6.0;
@@ -196,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737BD2B3196C3A420061AEDD /* WriteHealthKit.entitlements in Resources */,
 				73B990A2196C2B0E002A9C89 /* Main.storyboard in Resources */,
 				73B990A4196C2B0E002A9C89 /* Images.xcassets in Resources */,
 			);
@@ -210,6 +250,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8772BE18325847F78AA3706B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6D8047FC848475F88D757FA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-WriteHealthKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		73B9908F196C2B0E002A9C89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -218,6 +291,8 @@
 				73B9909F196C2B0E002A9C89 /* ViewController.m in Sources */,
 				73B9909C196C2B0E002A9C89 /* AppDelegate.m in Sources */,
 				73B99099196C2B0E002A9C89 /* main.m in Sources */,
+				17B5C356B6DC04EFD4823803 /* ViewModel.m in Sources */,
+				17B5C86EA227BA77ED1ABDDC /* DataStoreManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,23 +404,29 @@
 		};
 		73B990B4196C2B0F002A9C89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B46C68B4A0C415A95E0AA55 /* Pods-WriteHealthKit.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = WriteHealthKit/WriteHealthKit.entitlements;
 				INFOPLIST_FILE = WriteHealthKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
 		73B990B5196C2B0F002A9C89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B46C68B4A0C415A95E0AA55 /* Pods-WriteHealthKit.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = WriteHealthKit/WriteHealthKit.entitlements;
 				INFOPLIST_FILE = WriteHealthKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};
@@ -402,6 +483,7 @@
 				73B990B5196C2B0F002A9C89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73B990B6196C2B0F002A9C89 /* Build configuration list for PBXNativeTarget "WriteHealthKitTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +492,7 @@
 				73B990B8196C2B0F002A9C89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
