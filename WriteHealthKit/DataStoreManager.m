@@ -20,10 +20,16 @@
 
     return self;
 }
+// auth -> status
+- (PMKPromise *)availableType:(HKQuantityType *) hkQuantity {
+    return [self authorizationToType:hkQuantity].then(^{
+        return [self authorizationStatusForType:hkQuantity];
+    });
+}
 
 - (PMKPromise *)authorizationToType:(HKQuantityType *) quantityType {
     NSSet *dataTypes = [NSSet setWithObject:quantityType];
-    // authorization for write / read
+    // authorization for write
     return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
         [self.healthStore requestAuthorizationToShareTypes:dataTypes readTypes:dataTypes completion:^(BOOL success, NSError *error) {
             if (!error) {
@@ -32,6 +38,22 @@
                 rejecter(error);
             }
         }];
+    }];
+}
+
+- (PMKPromise *)authorizationStatusForType:(HKQuantityType *) quantityType {
+    NSSet *dataTypes = [NSSet setWithObject:quantityType];
+    // authorization for write
+    return [PMKPromise new:^(PMKPromiseFulfiller fulfiller, PMKPromiseRejecter rejecter) {
+        HKAuthorizationStatus status = [self.healthStore authorizationStatusForType:quantityType];
+        switch (status) {
+            case HKAuthorizationStatusNotDetermined:
+                rejecter([NSError errorWithDomain:@"HKAuthorizationStatus" code:status userInfo:nil]);
+            case HKAuthorizationStatusSharingDenied:
+                rejecter([NSError errorWithDomain:@"HKAuthorizationStatus" code:status userInfo:nil]);
+            case HKAuthorizationStatusSharingAuthorized:
+                fulfiller(nil);
+        }
     }];
 }
 

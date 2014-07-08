@@ -12,6 +12,11 @@
 @interface DataStoreManager : NSObject
 @property(nonatomic, strong) HKHealthStore *healthStore;
 
+- (PMKPromise *)availableType:(HKQuantityType *) hkQuantity;
+
 - (PMKPromise *)authorizationToType:(HKQuantityType *) hkQuantity;
+
+- (PMKPromise *)authorizationStatusForType:(HKQuantityType *) quantityType;
+
 - (PMKPromise *)writeSample:(HKQuantitySample *)sample;
 @end

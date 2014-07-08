@@ -24,7 +24,7 @@
     if (self.heightData == nil) {
         return nil;
     }
-    HKQuantityType *heightType = [self managedType];
+    HKQuantityType *heightType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeight];
     // double/cm
     double meterValue = self.heightData.doubleValue / 100;
     HKQuantity *height = [HKQuantity quantityWithUnit:[HKUnit meterUnit] doubleValue:meterValue];

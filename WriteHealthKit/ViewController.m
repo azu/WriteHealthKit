@@ -61,8 +61,8 @@
 }
 
 - (IBAction)handleSaveButton:(id) sender {
-    PMKPromise *authorizationPromise = [self.dataStoreManager authorizationToType:self.model.managedType];
-    authorizationPromise.then(^{
+    PMKPromise *availableTypePromise = [self.dataStoreManager availableType:self.model.managedType];
+    availableTypePromise.then(^{
         UIAlertView *savedAlert = [[UIAlertView alloc] initWithTitle:nil message:@"Saved!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [savedAlert show];
     }).catch(^(NSError *error) {
