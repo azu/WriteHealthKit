@@ -63,6 +63,8 @@
 - (IBAction)handleSaveButton:(id) sender {
     PMKPromise *availableTypePromise = [self.dataStoreManager availableType:self.model.managedType];
     availableTypePromise.then(^{
+        return [self.dataStoreManager writeSample:self.model.heightSample];
+    }).then(^{
         UIAlertView *savedAlert = [[UIAlertView alloc] initWithTitle:nil message:@"Saved!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [savedAlert show];
     }).catch(^(NSError *error) {
@@ -70,7 +72,6 @@
         [savedAlert show];
         NSLog(@"error = %@", error);
     });
-
 }
 
 @end

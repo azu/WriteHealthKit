@@ -14,7 +14,42 @@ pod install
 ## Usage
 
 1. Input data
-2. Save
+2. Save data
+
+
+### API Design
+
+Promise wrapper of `HKHealthStore`.
+
+```objc
+@interface DataStoreManager : NSObject
+@property(nonatomic, strong) HKHealthStore *healthStore;
+// authorizationToType + authorizationStatusForType
+- (PMKPromise *)availableType:(HKQuantityType *) hkQuantity;
+
+- (PMKPromise *)authorizationToType:(HKQuantityType *) hkQuantity;
+
+- (PMKPromise *)authorizationStatusForType:(HKQuantityType *) quantityType;
+
+- (PMKPromise *)writeSample:(HKQuantitySample *)sample;
+@end
+```
+
+Smart control flow by used that.
+
+``` objc
+PMKPromise *availableTypePromise = [self.dataStoreManager availableType:self.model.managedType];
+availableTypePromise.then(^{
+    return [self.dataStoreManager writeSample:self.model.heightSample];
+}).then(^{
+    UIAlertView *savedAlert = [[UIAlertView alloc] initWithTitle:nil message:@"Saved!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [savedAlert show];
+}).catch(^(NSError *error) {
+    UIAlertView *savedAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [savedAlert show];
+    NSLog(@"error = %@", error);
+});
+```
 
 ## Contributing
 

@@ -11,7 +11,7 @@
 
 @interface DataStoreManager : NSObject
 @property(nonatomic, strong) HKHealthStore *healthStore;
-
+// authorizationToType + authorizationStatusForType
 - (PMKPromise *)availableType:(HKQuantityType *) hkQuantity;
 
 - (PMKPromise *)authorizationToType:(HKQuantityType *) hkQuantity;
