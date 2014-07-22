@@ -5,6 +5,12 @@ Example project for HealthKit
 * use [PromiseKit](http://promisekit.org/ "PromiseKit")
 * write data
 
+A Series of HealthKit Demo.
+
+* [azu/ReadHealthKit](https://github.com/azu/ReadHealthKit "azu/ReadHealthKit")
+* [azu/WriteHealthKit](https://github.com/azu/WriteHealthKit "azu/WriteHealthKit")
+* [azu/StatisticsHealthKit](https://github.com/azu/StatisticsHealthKit "azu/StatisticsHealthKit")
+
 ## Installation
 
 ```sh
